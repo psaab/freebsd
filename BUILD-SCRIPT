@@ -1,0 +1,4 @@
+#!/bin/sh
+
+make -j8 buildworld > /root/git/bw.log 2>&1
+make buildkernel KERNCONF=h0h0magic > /root/git/kern.log 2>&1
