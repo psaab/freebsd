@@ -158,7 +158,7 @@ device		agp			# support several AGP chipsets
 device		uart			# Generic UART driver
 
 # PCI Ethernet NICs.
-device		igb			# Intel PRO/1000 PCIE Server Gigabit Family
+device		em			# Intel PRO/1000 Gigabit Ethernet Family
 device		cxgbe			# Chelsio T4-T6 1/10/25/40/100 Gigabit Ethernet
 device		cxgbev			# Chelsio T4-T6 Virtual Functions
 
