@@ -23,6 +23,7 @@ ident		GENERIC
 
 makeoptions	DEBUG=-g		# Build kernel with gdb(1) debug symbols
 makeoptions	WITH_CTF=1		# Run ctfconvert(1) for DTrace support
+makeoptions	WITH_EXTRA_TCP_STACKS=1
 
 options 	SCHED_ULE		# ULE scheduler
 options 	NUMA			# Non-Uniform Memory Architecture support
@@ -31,6 +32,7 @@ options 	INET			# InterNETworking
 options 	INET6			# IPv6 communications protocols
 options 	IPSEC			# IP (v4/v6) security
 options 	IPSEC_SUPPORT		# Allow kldload of ipsec and tcpmd5
+options 	TCPHPTS
 options 	TCP_OFFLOAD		# TCP offload
 options 	TCP_BLACKBOX		# Enhanced TCP event logging
 options 	TCP_HHOOK		# hhook(9) framework for TCP
@@ -158,6 +160,7 @@ device		agp			# support several AGP chipsets
 device		uart			# Generic UART driver
 
 # PCI Ethernet NICs.
+device		iflib
 device		em			# Intel PRO/1000 Gigabit Ethernet Family
 device		cxgbe			# Chelsio T4-T6 1/10/25/40/100 Gigabit Ethernet
 device		cxgbev			# Chelsio T4-T6 Virtual Functions
